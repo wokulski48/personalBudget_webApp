@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>Budżet osobisty</title>
+	<meta name="description" content="Aplikacja webowa do prowadzenia ewidencji przychodów oraz wydatków.">
+	<meta name="keywords" content="budżet, osobisty, ewidencja, wydatki">
+	<meta name="author" content="Michał Czopek">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<script type="text/javascript">
+		var date = new Date();
+		var day = date.getDate();
+		var month = date.getMonth() + 1;
+		var year = date.getFullYear();
+		if (month < 10) month = "0" + month;
+		if (day < 10) day = "0" + day;
+		var today = year + "-" + month + "-" + day;
+	</script>
+</head>
+<body>
+	<header>
+		<h1 class="logo">Budżet osobisty</h1>
+	</header>
+	<main>
+		<article>
+			<form>
+				<div id="addincomepanel">
+					<header>
+						<h2>Dodaj przychód</h2>
+					</header>
+					<div class="row">	
+						<label>Kwota [PLN]:
+						<div class="row">
+							<input type="number" name="amount" required></label>
+						</div>
+					</div>
+					<div class="row">	
+						<label>Data:
+						<div class="row">
+							<input type="date" name="date" id="date" required></label>
+						</div>
+					</div>
+						<script type="text/javascript">
+							document.getElementById('date').value = today;
+						</script>
+					<div class="row" style="width:250px; margin-left:auto; margin-right:auto;">	
+						<fieldset>
+							<legend>Kategoria:</legend>
+							<div>
+								<label><input type="radio" value="salary" name="category" checked>Wynagrodzenie</label>
+							</div>
+							<div>
+								<label><input type="radio" value="bankInterest" name="category">Odsetki bankowe</label>
+							</div>
+							<div>
+								<label><input type="radio" value="saleOnAllegro" name="category">Sprzedaż na allegro</label>
+							</div>
+							<div>
+								<label><input type="radio" value="other" name="category">Inne</label>
+							</div>
+						</fieldset>
+					</div>
+					<div class="row">
+						<label>Komentarz (opcjonalnie):
+						<div class="row">
+							<input type="text" name="comment"></label>
+						</div>
+					</div>
+					<div class="row">
+						<div id="addincomeleftbutton">
+							<input type="button" value="Dodaj">
+						</div>
+						<div id="addincomerightbutton">
+							<input type="button" value="Anuluj">
+						</div>
+					</div>
+				</div>
+			</form>
+		</article>
+	</main>
+	<footer>
+		<div id="addincomebottom">
+			Wszelkie prawa zastrzeżone &copy; 2021.
+		</div>
+	</footer>
+</body>
+</html>

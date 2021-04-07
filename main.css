@@ -1,0 +1,100 @@
+body
+{
+	margin: 0;
+	background-color: #2F3336;
+	color: #efefef;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+	text-align: center;
+}
+
+h1.logo
+{
+	font-size: 44px;
+	font-weight: 700;
+	color: #ddd;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin-top: 50px;
+	margin-bottom: 40px;
+}
+
+.panel
+{
+	float: left;
+	width: 50%;
+	
+}
+
+.panel:hover
+{
+	background-color: #1E2220;
+}
+
+.bottom
+{
+	clear: both;
+	margin-top: 479.31px;
+}
+
+h2
+{
+	font-size: 22px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: #ddd;
+	letter-spacing: 2px;
+}
+
+.row
+{
+	padding: 5px;
+}
+
+.mainmenurow
+{
+	padding: 22px;
+}
+
+#loggingrow
+{
+	margin-top: 67px;
+	padding: 5px;
+}
+
+#mainmenubottom
+{
+	margin-top: 51.06px;
+}
+
+#addincomeleftbutton
+{
+	float: left;
+	width: 47%;
+	text-align: right;
+	margin-right: 3%;
+}
+
+#addincomerightbutton
+{
+	float: left;
+	width: 47%;
+	text-align: left;
+	margin-left: 3%;
+}
+
+#addincomebottom
+{
+	margin-top: 35px;
+}
+
+.col
+{
+	display: inline-block;
+	margin: 0 10px;
+}
+
+#addexpensebottom
+{
+	margin-top: 39.44px;
+}

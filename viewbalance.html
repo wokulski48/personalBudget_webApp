@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>Budżet osobisty</title>
+	<meta name="description" content="Aplikacja webowa do prowadzenia ewidencji przychodów oraz wydatków.">
+	<meta name="keywords" content="budżet, osobisty, ewidencja, wydatki">
+	<meta name="author" content="Michał Czopek">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<script type="text/javascript">
+		function showAddFields()
+		{
+			if(document.getElementById("period").value == "nonStandard")
+			{
+				document.getElementById("dateFromLabel").style.visibility = "visible";
+				document.getElementById("dateToLabel").style.visibility = "visible";
+				document.getElementById("dateFrom").disabled = false;
+				document.getElementById("dateTo").disabled = false;
+			}
+			else
+			{
+				document.getElementById("dateFromLabel").style.visibility = "hidden";
+				document.getElementById("dateToLabel").style.visibility = "hidden";
+				document.getElementById("dateFrom").disabled = true;
+				document.getElementById("dateTo").disabled = true;
+			}
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<h1 class="logo">Budżet osobisty</h1>
+	</header>
+	<main>
+		<article>
+			<form>
+				<div id="viewbalancepanel">
+					<header>
+						<h2>Przeglądaj bilans</h2>
+					</header>
+					<div class="row" style="text-align:left; margin-left:95px; float:left;">
+						<label for="period">Okres: </label>
+						<select id="period" name="period" onclick="showAddFields()">
+							<option value="currentMonth" selected>bieżący miesiąc</option>
+							<option value="previousMonth">poprzedni miesiąc</option>
+							<option value="currentYear">bieżący rok</option>
+							<option value="nonStandard">niestandardowy</option>
+						</select>
+					</div>
+					<div class="row" style="float:left;">	
+						<label id="dateFromLabel" style="visibility: hidden;">Od: <input type="date" name="dateFrom" id="dateFrom" disabled required></label>
+					</div>
+					<div class="row" style="float:left;">	
+						<label id="dateToLabel" style="visibility: hidden;">Do: <input type="date" name="dateTo" id="dateTo" disabled required></label>
+					</div>
+					<div style="clear:both;"></div>
+					<div class="row" id="incomesTable">incomesTable</div>
+					<div class="row" id="expensesTable">expensesTable</div>
+					<div class="row" id="balance">balance</div>
+					<div class="row" id="pieChart">pie chart</div>
+				</div>
+			</form>
+		</article>
+	</main>
+	<footer>
+		<div id="addexpensebottom">
+			Wszelkie prawa zastrzeżone &copy; 2021.
+		</div>
+	</footer>
+</body>
+</html>

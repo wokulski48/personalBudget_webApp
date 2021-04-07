@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>Budżet osobisty</title>
+	<meta name="description" content="Aplikacja webowa do prowadzenia ewidencji przychodów oraz wydatków.">
+	<meta name="keywords" content="budżet, osobisty, ewidencja, wydatki">
+	<meta name="author" content="Michał Czopek">
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1 class="logo">Budżet osobisty</h1>
+	</header>
+	<main>
+		<article>
+			<section>
+				<form>
+					<div class="panel">
+						<header>
+							<h2>Rejestracja</h2>
+						</header>
+						<div class="row">
+							<label>Imię użytkownika:
+								<div class="row">
+									<input type="text" name="username" required></label>
+								</div>
+						</div>
+						<div class="row">
+							<label>Adres e-mail użytkownika:
+							<div class="row">	
+								<input type="email" name="useremail" required></label>
+							</div>
+						</div>
+						<div class="row">	
+							<label>Hasło użytkownika:
+							<div class="row">
+								<input type="password" name="userpassword" required></label>
+							</div>	
+						</div>
+						<div class="row">
+							<input type="submit" value="Zarejestruj">
+						</div>
+					</div>
+				</form>
+			</section>
+			<section>
+				<form>
+					<div class="panel">
+						<header>
+							<h2>Logowanie</h2>
+						</header>
+						<div class="row">
+							<label>Adres e-mail użytkownika:
+							<div class="row">
+								<input type="email" name="useremail" required></label>
+							</div>
+						</div>
+						<div class="row">	
+							<label>Hasło użytkownika:
+							<div class="row">
+								<input type="password" name="userpassword" required></label>
+							</div>
+						</div>
+						<div id="loggingrow">
+							<input type="submit" value="Zaloguj">
+						</div>
+					</div>
+				</form>
+			</section>
+		</article>
+	</main>
+	<footer>
+		<div class="bottom">
+			Wszelkie prawa zastrzeżone &copy; 2021.
+		</div>
+	</footer>
+</body>
+</html>
